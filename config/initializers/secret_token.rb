@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Kaomoji::Application.config.secret_key_base = 'e315ca188ff2a9b4782b1de04b7205d548e0996bcec13de8822fcc2eff0f0f86a3a6de915d82fac6ce876e3a64b1edd47fb167383c15d3b5270ebbcc5d40b051'
+KaomojiJp::Application.config.secret_key_base = 'fb65d8f2d0316827a1aec15fbb325174dcd1ed76d91601fbef720e2769c79d1ecd95efc48252934af82ccc109cf967d1b20a36a75218d780fd4b63ff9b73f0f1'

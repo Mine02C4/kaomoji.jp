@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Kaomoji::Application.load_tasks
+KaomojiJp::Application.load_tasks
