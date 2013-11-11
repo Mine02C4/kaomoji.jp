@@ -53,4 +53,5 @@ KaomojiJp::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :kaomoji_debug
 end

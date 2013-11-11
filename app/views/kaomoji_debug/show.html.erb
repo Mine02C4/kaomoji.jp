@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>顔文字:</strong>
+  <%= @kaomoji.kaomoji %>
+</p>
+
+<p>
+  <strong>読み方:</strong>
+  <%= @kaomoji.reading %>
+</p>
+
+<%= link_to '編集', edit_kaomoji_debug_path(@kaomoji) %> |
+<%= link_to '戻る', kaomoji_debug_index_path %>

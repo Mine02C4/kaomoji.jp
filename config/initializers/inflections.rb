@@ -16,6 +16,6 @@
 # end
 
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.irregular "kaomoji","kaomojies"
+  inflect.irregular 'kaomoji','kaomojies'
 end
 

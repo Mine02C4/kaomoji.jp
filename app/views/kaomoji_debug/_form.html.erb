@@ -1,0 +1,38 @@
+<% action, method = @kaomoji.respond_to?(:persisted?) && @kaomoji.persisted? ? [:update, :patch] : [:create, :post] %>
+<%= form_for @kaomoji, :url => {:controller => 'kaomoji_debug', :action => action}, :html => {:method => method} do |f| %>
+  <% if @kaomoji.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kaomoji.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+      <% @kaomoji.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :kaomoji %><br>
+    <%= f.text_field :kaomoji %>
+  </div>
+  <div class="field">
+    <%= f.label :registered_time %><br>
+    <%= f.datetime_select :registered_time %>
+  </div>
+  <div class="field">
+    <%= f.label :published_time %><br>
+    <%= f.datetime_select :published_time %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :has_words %><br>
+    <%= f.check_box :has_words %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
