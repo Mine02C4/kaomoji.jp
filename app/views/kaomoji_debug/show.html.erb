@@ -1,14 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>顔文字:</strong>
-  <%= @kaomoji.kaomoji %>
-</p>
+<h2>顔文字</h2>
+<p><%= @kaomoji.kaomoji %></p>
 
-<p>
-  <strong>読み方:</strong>
-  <%= @kaomoji.reading %>
-</p>
+<h2>読み方</h2>
+<ul>
+  <% @kaomoji.readings.each do |reading| %>
+  <li><%= reading.reading %></li>
+  <% end %>
+</ul>
+
+<h2>感情表現</h2>
+<ul>
+  <% @kaomoji.feelings.each do |feeling| %>
+  <li><%= feeling.name %></li>
+  <% end %>
+</ul>
+
+<h2>登録日時</h2>
+<p><%= @kaomoji.registered_time %></p>
+
+<h2>公開日時</h2>
+<p><%= @kaomoji.published_time %></p>
+
+<h2>状態</h2>
+<p><%= @kaomoji.status_string %></p>
+
+<h2>台詞の有無</h2>
+<p><%= @kaomoji.has_words %></p>
 
 <%= link_to '編集', edit_kaomoji_debug_path(@kaomoji) %> |
 <%= link_to '戻る', kaomoji_debug_index_path %>
