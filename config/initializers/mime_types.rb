@@ -3,3 +3,6 @@
 # Add new mime types for use in respond_to blocks:
 # Mime::Type.register "text/richtext", :rtf
 # Mime::Type.register_alias "text/html", :iphone
+
+Mime::Type.unregister :html
+Mime::Type.register 'application/xhtml+xml', :html, %w( application/xhtml+xml ), %w( xhtml )
