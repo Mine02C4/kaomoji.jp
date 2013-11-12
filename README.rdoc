@@ -14,3 +14,4 @@
 
 * Ruby 2.0.0
 * Rails 4.0.1
+* Windows 64bit 現状でGemfile.lockがこのプラットフォーム向けに固定。いつか治す
